@@ -39,6 +39,7 @@ body {
 }
 .size {
     animation-name: bonc;
+    animation-duration: 700ms;
 }
 @keyframes bonc {
     0% {
