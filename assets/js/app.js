@@ -17,7 +17,10 @@ function rn() {
         case 6: number.style.backgroundColor = "#ff7b00";
         break;
     }
-    number.classList.toggle("size")
+    number.classList.add("size");
+    setTimeout(function() {
+        number.classList.remove('size');
+      }, 1000);
 };
 rn();
 button.addEventListener("click" , rn);
