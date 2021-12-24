@@ -1,26 +1,20 @@
-let number = document.querySelector(".number");
-let button = document.querySelector(".btn");
-function rn() {
+let dice = document.getElementById("dice");
+function roll() {
     let randomnum = Math.floor(Math.random() * 6) + 1;
-    number.innerHTML = randomnum;
-    switch(randomnum) {
-        case 1: number.style.backgroundColor = "#ffea00";
+    dice.classList.add("roll")
+    setTimeout(function() {dice.classList.remove("roll")} , 1000)
+    switch (randomnum) {
+        case 1: dice.src = "assets/img/1.png"
         break;
-        case 2: number.style.backgroundColor = "#ffd000";
+        case 2: dice.src = "assets/img/2.png"
         break;
-        case 3: number.style.backgroundColor = "#ffb700";
+        case 3: dice.src = "assets/img/3.png"
         break;
-        case 4: number.style.backgroundColor = "#ffaa00";
+        case 4: dice.src = "assets/img/4.png"
         break;
-        case 5: number.style.backgroundColor = "#ff9500";
+        case 5: dice.src = "assets/img/5.png"
         break;
-        case 6: number.style.backgroundColor = "#ff7b00";
+        case 6: dice.src = "assets/img/6.png"
         break;
-    }
-    number.classList.add("size");
-    setTimeout(function() {
-        number.classList.remove('size');
-      }, 1000);
-};
-rn();
-button.addEventListener("click" , rn);
+    };
+}

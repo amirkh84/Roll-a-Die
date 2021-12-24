@@ -1,51 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 html {
-    width: 100%;
     height: 100%;
 }
 body {
-    width: 100%;
     height: 100%;
-    margin: 0px;
+    width: 100%;
+    background-color: #f0f8ff;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #340077;
     flex-direction: column;
-    font-family: sans-serif;
+    overflow: hidden;
 }
-.number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    font-size: 120px;
-    border-radius: 30px;
-    color: white;
-    transition: 250ms;
-    margin: 50px;
+.roll {
+    animation: roll 1s;
+
 }
-.btn {
-    background-color: whitesmoke;
-    width: 100px;
-    height: 50px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    cursor:default;
-}
-.size {
-    animation-name: bonc;
-    animation-duration: 700ms;
-}
-@keyframes bonc {
+@keyframes roll {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
     }
+}
+#btn {
+    background-color: rgb(255, 71, 71);
+    color: whitesmoke;
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.568);
+}
+#btn:active {
+    background-color: rgb(187, 66, 44);
 }
